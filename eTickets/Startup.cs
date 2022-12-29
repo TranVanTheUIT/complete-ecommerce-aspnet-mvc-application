@@ -18,7 +18,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace eTickets
-{
+{ 
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -39,7 +39,7 @@ namespace eTickets
             services.AddScoped<IActorsService, ActorsService>();
             services.AddScoped<IProducersService, ProducersService>();
             services.AddScoped<ICinemasService, CinemasService>();
-            services.AddScoped<IMoviesService, MoviesService>();
+            services.AddScoped<IMoviesService, MoviesService>(); 
             services.AddScoped<IOrdersService, OrdersService>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

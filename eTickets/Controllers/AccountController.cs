@@ -24,11 +24,11 @@ namespace eTickets.Controllers
             _signInManager = signInManager;
             _context = context;
         }
-
+         
 
         public async Task<IActionResult> Users()
         {
-            var users = await _context.Users.ToListAsync();
+            var users = await _context.Users.ToListAsync();  
             return View(users);
         }
 
@@ -78,7 +78,7 @@ namespace eTickets.Controllers
             var newUser = new ApplicationUser()
             {
                 FullName = registerVM.FullName,
-                Email = registerVM.EmailAddress,
+                Email = registerVM.EmailAddress, 
                 UserName = registerVM.EmailAddress
             };
             var newUserResponse = await _userManager.CreateAsync(newUser, registerVM.Password);

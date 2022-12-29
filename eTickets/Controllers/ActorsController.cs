@@ -14,7 +14,7 @@ namespace eTickets.Controllers
     [Authorize(Roles = UserRoles.Admin)]
     public class ActorsController : Controller
     {
-        private readonly IActorsService _service;
+        private readonly IActorsService _service; 
 
         public ActorsController(IActorsService service)
         {
@@ -70,7 +70,7 @@ namespace eTickets.Controllers
             {
                 return View(actor);
             }
-            await _service.UpdateAsync(id, actor);
+            await _service.UpdateAsync(id, actor); 
             return RedirectToAction(nameof(Index));
         }
 
@@ -93,3 +93,4 @@ namespace eTickets.Controllers
         }
     }
 }
+  

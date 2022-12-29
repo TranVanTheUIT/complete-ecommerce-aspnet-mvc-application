@@ -34,8 +34,7 @@ namespace eTickets.Data.Services
                 UserId = userId,
                 Email = userEmailAddress
             };
-            await _context.Orders.AddAsync(order);
-            await _context.SaveChangesAsync();
+            await _context.Orders.AddAsync(order); 
 
             foreach (var item in items)
             {
